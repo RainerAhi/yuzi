@@ -62,7 +62,7 @@ export default function Model2({props }) {
       })
 
       .to(model2.current.rotation, {
-        y: Math.PI * 2,
+        y: Math.PI * 3,
         scrollTrigger: {
           trigger: ".container-one",
           start: "top bottom",
