@@ -49,9 +49,9 @@ export default function Model3({props }) {
       })
 
       .to(model2.current.scale, {
-        x: 0.6,
-        y: 0.6,
-        z: 0.6,
+        x: 1.3,
+        y: 1.3,
+        z: 1.3,
         scrollTrigger: {
           trigger: ".container-two",
           start: "top bottom",
@@ -79,20 +79,33 @@ export default function Model3({props }) {
     });
   }, []);
 
-  const desktopModelPath = "./desktop.glb";
-  const mobileModelPath = "./mobile.glb";
-
-  const { nodes, materials } = useGLTF(isMobile ? mobileModelPath : desktopModelPath);
+  const { nodes, materials } = useGLTF('./bottle2.glb')
 
   return (
     <>
         <OrbitControls target={ [ -5, 0, 0 ] } ref={controlsRef} minPolarAngle={Math.PI / -2} maxPolarAngle={Math.PI / 1} enableZoom={ false } enableRotate={ false } enablePan={ false } />
-        <group scale={ 0.4 } {...props} dispose={null} ref={model2}>
-            <mesh castShadow receiveShadow geometry={nodes.can.geometry} material={materials.can} />
-        </group>
+        <group  ref={model2} {...props} dispose={null}>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Bottle001.geometry}
+        material={materials['Bottle.022']}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.cap001.geometry}
+          material={materials['Cap.022']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Liquid001.geometry}
+          material={materials['juice.022']}
+        />
+      </mesh>
+    </group>
     </>
   );
 }
 
-useGLTF.preload("./desktop.glb")
-useGLTF.preload("./mobile.glb");
+useGLTF.preload('./bottle2.glb')
