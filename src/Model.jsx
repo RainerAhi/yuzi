@@ -8,6 +8,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 export default function Model({ rotate, setRotate, ...props }) {
+
+  const { nodes, materials } = useGLTF('./bottlemodel.glb')
+
   const { camera, scene } = useThree();
   const model = useRef();
   const [isMobile, setIsMobile] = useState(window.innerWidth < 800);
@@ -102,16 +105,28 @@ export default function Model({ rotate, setRotate, ...props }) {
     });
   }, []);
 
-  const desktopModel = useGLTF('/desktop2.glb');
-  const mobileModel = useGLTF('/mobile2.glb');
-  const modelData = isMobile ? mobileModel : desktopModel;
-
   return (
-    <group {...props} dispose={null}>
-      <mesh scale={isMobile ? 0.8 : 1} ref={model} geometry={modelData.nodes.can.geometry} material={modelData.materials.can} />
+    <group scale={ 0.6 } ref={model} {...props} dispose={null}>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Bottle001.geometry}
+        material={materials['Bottle.015']}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.cap001.geometry}
+          material={materials['Cap.015']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Liquid001.geometry}
+          material={materials['juice.015']}
+        />
+      </mesh>
     </group>
   );
 }
 
-useGLTF.preload('/desktop2.glb');
-useGLTF.preload('/mobile2.glb');
+useGLTF.preload('/bottlemodel.glb')
