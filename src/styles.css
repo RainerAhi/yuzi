@@ -1012,12 +1012,6 @@ section {
   align-items: center;
 }
 
-.background-video {
-  border-radius: 25px;
-  width: 70%;
-  height: auto;
-}
-
 .six-text {
   font-family: 'Freudian One', sans-serif;
   font-size: 6vw;
@@ -1025,6 +1019,20 @@ section {
   margin-bottom: 10vh;
   margin-top: 10vh;
   color: #f9f6e5;
+}
+
+.six-videos {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.background-video {
+  border-radius: 25px;
+  width: 20%;
+  height: auto;
 }
 
 /* SECTION SEVEN */
@@ -2075,12 +2083,6 @@ LOADING SCREEN */
   align-items: center;
 }
 
-.background-video {
-  border-radius: 25px;
-  width: 90%;
-  height: auto;
-}
-
 .six-text {
   font-family: 'Freudian One', sans-serif;
   font-size: 3rem;
@@ -2089,6 +2091,22 @@ LOADING SCREEN */
   margin-top: 10vh;
   color: #f9f6e5;
   text-align: center;
+}
+
+.six-videos {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 5vh;
+}
+
+.background-video {
+  border-radius: 25px;
+  width: 70%;
+  height: auto;
 }
 
 /* SECTION SEVEN */
