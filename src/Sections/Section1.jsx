@@ -93,7 +93,7 @@ export const Section1 = () => {
                         <i className="fa-solid navigation-icons fa-envelope"></i>
                     </motion.div>
                 </div>
-                <img src="./logonew.png" className="navigation-logo" />
+                <img src="./yuzilogo.png" className="navigation-logo" />
                 <div className="navigation-left">
                     <motion.div
                         className="buy buy-desktop"

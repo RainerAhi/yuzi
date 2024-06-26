@@ -1059,7 +1059,6 @@ section {
 .seven-footer {
   width: 100%;
   height: 10vh;
-  background-color: #f9f6e5;
   margin-top: 7.5vh;
   display: flex;
   align-items: center;
@@ -1077,7 +1076,7 @@ section {
 }
 
 .footer-icons {
-  color: #1d1c1c;
+  color: #feffef;
   font-size: 1.25vw;
   cursor: pointer;
   z-index: 100;
@@ -1092,6 +1091,7 @@ section {
   font-weight: 400;
   margin-top: 0;
   margin-bottom: 0.25%;
+  color: #feffef;
 }
 
 
@@ -2045,7 +2045,7 @@ LOADING SCREEN */
 }
 
 .soda-big {
-  width: 90%;
+  width: 50%;
   height: auto;
   z-index: 1;
   border-radius: 25px;
@@ -2123,7 +2123,6 @@ LOADING SCREEN */
 .seven-footer {
   width: 100%;
   height: 10vh;
-  background-color: #f9f6e5;
   margin-top: 7.5vh;
   display: flex;
   align-items: center;
@@ -2141,7 +2140,6 @@ LOADING SCREEN */
 }
 
 .footer-icons {
-  color: #1d1c1c;
   font-size: 1.25rem;
   cursor: pointer;
   z-index: 100;

@@ -70,11 +70,11 @@ export const Section5 = () => {
       return (
         <section className="five">
           <div className="five-content">
-            <img src="/soda1.JPG" className="soda-small soda-z2" alt="soda1" />
-            <img src="/soda2.JPG" className="soda-small" alt="soda2" />
-            <img src="/soda5.jpg" className="soda-small" alt="soda3" />
-            <img src="/soda4edited.jpg" className="soda-small soda-z2" alt="soda4" />
-            <img src="/soda3.JPG" className="soda-big" alt="soda5" />
+            <img src="/y1.png" className="soda-small soda-z2" alt="soda1" />
+            <img src="/y2.png" className="soda-small" alt="soda2" />
+            <img src="/y3.png" className="soda-small" alt="soda3" />
+            <img src="/y4.png" className="soda-small soda-z2" alt="soda4" />
+            <img src="/y5.png" className="soda-big" alt="soda5" />
           </div>
         </section>
       );

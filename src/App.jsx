@@ -80,7 +80,7 @@ const LoadingScreen = ({ onLoaded }) => {
         <div className="loading-text">
           {Math.round(progress)}%
         </div>
-        <img src="./logonew.png" className="loading-logo" />
+        <img src="./yuzilogo.png" className="loading-logo" />
       </div>
     </div>
   );
