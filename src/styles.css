@@ -1985,8 +1985,6 @@ LOADING SCREEN */
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(187,127,120,255);
-  background-image: url('/newg2.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

@@ -106,7 +106,7 @@ export default function Model({ rotate, setRotate, ...props }) {
   }, []);
 
   return (
-    <group scale={ 0.6 } ref={model} {...props} dispose={null}>
+    <group scale={ 0.6 } rotation={ [ 0,  Math.PI * 1, 0 ] } ref={model} {...props} dispose={null}>
       <mesh
         castShadow
         receiveShadow
