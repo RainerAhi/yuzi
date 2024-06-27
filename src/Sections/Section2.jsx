@@ -84,7 +84,7 @@ export const Section2 = () => {
 
     return (
         <section className="section two">
-            <audio ref={audioRef} src="/opening2.mp3" />
+            <audio ref={audioRef} src="/juice.wav" />
             <div className="mobile-scroll"/>
             <div className="experience">
                 <Canvas shadows camera={{ position: [0, 0, 10], fov: 35 }} >

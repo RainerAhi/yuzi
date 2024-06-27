@@ -19,7 +19,7 @@ export const Section7 = () => {
                 whileTap={{ scale: 0.9 }}
                 transition={{ type: 'spring', stiffness: 400, damping: 10 }}
                 className='wave-button glowing-button'
-                onClick={() => handleClick('https://www.dialedweb.com/lander')}
+                onClick={() => handleClick('https://drinkyuzy.com/')}
               >
                 <h1 className='button-text white'>ORDER NOW</h1>
                 <div className='wave' />
@@ -29,7 +29,7 @@ export const Section7 = () => {
                 <motion.div
                         whileHover={{ y: -5 }}
                         transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                        onClick={() => handleClick('https://www.instagram.com/dialedweb')}
+                        onClick={() => handleClick('')}
                     >
                         <i className="fa-brands footer-icons fa-instagram"></i>
                     </motion.div>
@@ -43,7 +43,7 @@ export const Section7 = () => {
                     <motion.div
                         whileHover={{ y: -5 }}
                         transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                        onClick={() => handleClick('https://www.instagram.com/dialedweb')}
+                        onClick={() => handleClick('')}
                     >
                         <i className="fa-brands footer-icons fa-tiktok"></i>
                     </motion.div>

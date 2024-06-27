@@ -67,7 +67,7 @@ export const Section1 = () => {
                     <motion.div
                         whileHover={{ y: -5 }}
                         transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                        onClick={() => handleClick('https://www.instagram.com/dialedweb')}
+                        onClick={() => handleClick('')}
                     >
                         <i className="fa-brands navigation-icons fa-instagram"></i>
                     </motion.div>
@@ -81,7 +81,7 @@ export const Section1 = () => {
                     <motion.div
                         whileHover={{ y: -5 }}
                         transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                        onClick={() => handleClick('https://www.instagram.com/dialedweb')}
+                        onClick={() => handleClick('')}
                     >
                         <i className="fa-brands navigation-icons fa-tiktok"></i>
                     </motion.div>
@@ -146,7 +146,7 @@ export const Section1 = () => {
                         }}
                         className="title-description"
                     >
-                        FRESH AND REFRESHING
+                        CRAFTED. JUICY. PREMIUM.
                     </h1>
                 </div>
                 <div className="scroll-container">
