@@ -62,7 +62,7 @@ export default function Model3({props }) {
       })
 
       .to(model2.current.rotation, {
-        y: Math.PI * -3,
+        y: Math.PI * -1,
         scrollTrigger: {
           trigger: ".container-two",
           start: "top bottom",
@@ -79,33 +79,41 @@ export default function Model3({props }) {
     });
   }, []);
 
-  const { nodes, materials } = useGLTF('./bottle2.glb')
+  const { nodes, materials } = useGLTF('./bottle3.glb')
 
   return (
     <>
         <OrbitControls target={ [ -5, 0, 0 ] } ref={controlsRef} minPolarAngle={Math.PI / -2} maxPolarAngle={Math.PI / 1} enableZoom={ false } enableRotate={ false } enablePan={ false } />
         <group  ref={model2} {...props} dispose={null}>
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Bottle001.geometry}
-        material={materials['Bottle.022']}>
+        <group scale={0.06}>
         <mesh
           castShadow
           receiveShadow
-          geometry={nodes.cap001.geometry}
-          material={materials['Cap.022']}
+          geometry={nodes.Bottle009.geometry}
+          material={materials['Bottle.004']}
+          rotation={[-Math.PI / 2, 0, -Math.PI / 2]}
+          scale={100}
         />
         <mesh
           castShadow
           receiveShadow
-          geometry={nodes.Liquid001.geometry}
-          material={materials['juice.022']}
+          geometry={nodes.Bottle011.geometry}
+          material={materials['Cap.004']}
+          rotation={[-Math.PI / 2, 0, -Math.PI / 2]}
+          scale={100}
         />
-      </mesh>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Bottle015.geometry}
+          material={materials['juice.004']}
+          rotation={[-Math.PI / 2, 0, -Math.PI / 2]}
+          scale={100}
+        />
+      </group>
     </group>
     </>
   );
 }
 
-useGLTF.preload('./bottle2.glb')
+useGLTF.preload('./bottle3.glb')

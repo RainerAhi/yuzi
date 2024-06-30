@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 export default function Model({ rotate, setRotate, ...props }) {
 
-  const { nodes, materials } = useGLTF('./bottle2.glb')
+  const { nodes, materials } = useGLTF('/bottle3.glb')
 
   const { camera, scene } = useThree();
   const model = useRef();
@@ -107,26 +107,34 @@ export default function Model({ rotate, setRotate, ...props }) {
 
   return (
     <group ref={model} rotation={ [ 0, Math.PI * 1, 0 ] } {...props} dispose={null}>
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Bottle001.geometry}
-        material={materials['Bottle.022']}>
+      <group scale={0.06}>
         <mesh
           castShadow
           receiveShadow
-          geometry={nodes.cap001.geometry}
-          material={materials['Cap.022']}
+          geometry={nodes.Bottle009.geometry}
+          material={materials['Bottle.004']}
+          rotation={[-Math.PI / 2, 0, -Math.PI / 2]}
+          scale={100}
         />
         <mesh
           castShadow
           receiveShadow
-          geometry={nodes.Liquid001.geometry}
-          material={materials['juice.022']}
+          geometry={nodes.Bottle011.geometry}
+          material={materials['Cap.004']}
+          rotation={[-Math.PI / 2, 0, -Math.PI / 2]}
+          scale={100}
         />
-      </mesh>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Bottle015.geometry}
+          material={materials['juice.004']}
+          rotation={[-Math.PI / 2, 0, -Math.PI / 2]}
+          scale={100}
+        />
+      </group>
     </group>
   );
 }
 
-useGLTF.preload('/bottle2.glb')
+useGLTF.preload('/bottle3.glb')
